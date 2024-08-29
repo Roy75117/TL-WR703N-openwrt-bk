@@ -202,6 +202,38 @@ on PC :
 guest share folder path is **/root/share**
 
 ##### sshtunnel
+SSH needs a key pair, and the default tools on OpenWRT are for Dropbear keys, but for sshtunnel we need OpenSSH keys.
+Dropbear doesn't support socket5 proxy.
+
+First, a place to store the keys, and create a Dropbear key:
+
+on TL-WR703N :
+``` shell
+    cd ~
+    mkdir .ssh
+    chmod 700 .ssh/
+    dropbearkey -t rsa -f /root/.ssh/id_dropbear
+```
+That last command will print the public key to the console, which we can copy and paste into a file:
+``` shell
+    vi ~/.ssh/id_rsa.pub
+```
+The same public key can also be copied into ~/.ssh/authorized_keys on ssh server we want to connect to.
+``` shell
+    scp -p [port] ~/.ssh/id_rsa.pub [account]@[my.ssh.server]:~/.ssh/authorized_keys
+```
+The Dropbear key needs to be converted, after installing the tool to do that:
+``` shell
+    opkg install dropbearconvert
+    dropbearconvert dropbear openssh ~/.ssh/id_dropbear ~/.ssh/id_rsa
+``` 
+Now you can log to ssh server without input password.
+``` shell
+    ssh -p [port] [account]@[my.ssh.server]
+``` 
+
+Then to restore sshtunnel config 
+
 on PC :
 ``` shell
     scp ./rootfs/etc/config/sshtunnel root@192.168.5.1:/etc/config
@@ -211,6 +243,8 @@ default is raspbian server, check config for more detail.
 proxy port is **1234**.
 
 Assign socket v5 proxy as **socket://192.68.5.1:1234**
+
+_reference_ : https://blog.thestateofme.com/2022/10/26/socks-proxy-ssh-tunnels-on-openwrt/
 
 ##### ttyd
 on PC :
