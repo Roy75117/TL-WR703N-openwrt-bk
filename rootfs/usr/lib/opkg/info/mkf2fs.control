@@ -1,0 +1,10 @@
+Package: mkf2fs
+Version: 1.8.0-3
+Depends: libc, libf2fs
+Source: feeds/base/package/utils/f2fs-tools
+License: GPLv2
+Section: utils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 13741
+Description:  Utility for creating a Flash-Friendly File System (F2FS)

@@ -1,0 +1,12 @@
+Package: aria2
+Version: 1.30.0-1
+Depends: libc, zlib, libstdcpp, libopenssl
+Source: feeds/packages/net/aria2
+License: GPLv2
+LicenseFiles: COPYING
+Section: net
+Maintainer: Imre Kaloz <kaloz@openwrt.org>, Hsing-Wang Liao <kuoruan@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 578755
+Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
+ utility

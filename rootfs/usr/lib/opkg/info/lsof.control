@@ -1,0 +1,11 @@
+Package: lsof
+Version: 4.89-1
+Depends: libc, librpc
+Source: feeds/packages/utils/lsof
+License: Unique
+LicenseFiles: 00README
+Section: utils
+Maintainer: Maxim Storchak <m.storchak@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 59690
+Description:  LiSt Open Files - a diagnostic tool

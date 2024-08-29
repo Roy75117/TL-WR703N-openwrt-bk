@@ -1,0 +1,8 @@
+Package: luci-app-commands
+Version: git-19.271.72080-7b230b0-1
+Depends: libc
+Source: feeds/luci/applications/luci-app-commands
+Section: luci
+Architecture: all
+Installed-Size: 4901
+Description:  LuCI Shell Command Module

@@ -1,0 +1,32 @@
+#!/bin/sh /etc/rc.common
+# Example script
+# Copyright (C) 2007 OpenWrt.org
+
+START=98
+STOP=20
+
+SERVICE_DAEMONIZE=1
+
+start() {
+	logger -t TTYD 'Starting ttyd service...'
+	echo 'Starting ttyd service...'
+	service_start /usr/bin/ttyd -i br-lan -p 8888 /bin/login
+	return 0
+}
+
+stop() {
+	if [ -n "`pidof ttyd`" ]; then
+		logger -t TTYD 'Shutting down ttyd service...'
+		echo 'Shutting down ttyd service...'
+		service_stop /usr/bin/ttyd
+	fi
+	return 0
+}
+
+restart() {
+	logger -t TTYD 'Restarting ttyd service...'
+	echo 'Restarting ttyd service...'
+	stop
+	sleep 2
+	start
+}

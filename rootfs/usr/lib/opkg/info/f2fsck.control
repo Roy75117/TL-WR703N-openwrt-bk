@@ -1,0 +1,10 @@
+Package: f2fsck
+Version: 1.8.0-3
+Depends: libc, libf2fs
+Source: feeds/base/package/utils/f2fs-tools
+License: GPLv2
+Section: utils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 48644
+Description:  Utility for checking/repairing a Flash-Friendly File System (F2FS)

@@ -1,0 +1,8 @@
+Package: luci-base
+Version: git-19.271.72080-7b230b0-1
+Depends: libc, lua, libuci-lua, luci-lib-nixio, luci-lib-ip, rpcd, libubus-lua, luci-lib-jsonc
+Source: feeds/luci/modules/luci-base
+Section: luci
+Architecture: mips_24kc
+Installed-Size: 123641
+Description:  LuCI core libraries

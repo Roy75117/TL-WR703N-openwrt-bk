@@ -1,0 +1,30 @@
+
+config defaults
+	option syn_flood '1'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+
+config zone
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option name 'lan'
+	option masq '1'
+	option network 'L2TP lan'
+	option forward 'REJECT'
+
+config zone
+	option input 'ACCEPT'
+	option forward 'REJECT'
+	option output 'ACCEPT'
+	option name 'wlan'
+	option masq '1'
+	option network 'wlan'
+
+config forwarding
+	option dest 'lan'
+	option src 'wlan'
+
+config forwarding
+	option dest 'wlan'
+	option src 'lan'

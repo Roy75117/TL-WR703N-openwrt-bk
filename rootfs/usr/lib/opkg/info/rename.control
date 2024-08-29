@@ -1,0 +1,11 @@
+Package: rename
+Version: 2.29.2-1
+Depends: libc, librt
+Source: feeds/base/package/utils/util-linux
+License: GPL-2.0
+LicenseFiles: COPYING getopt/COPYING libblkid/COPYING libmount/COPYING Documentation/licenses/COPYING.GPLv2 Documentation/licenses/COPYING.LGPLv2.1 libuuid/COPYING Documentation/licenses/COPYING.BSD-3
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 3042
+Description:  rename will rename the specified files by replacing the first occurrence of
+ expression in their name by replacement

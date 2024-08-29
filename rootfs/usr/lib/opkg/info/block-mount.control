@@ -1,0 +1,10 @@
+Package: block-mount
+Version: 2018-04-16-6609e98a-1
+Depends: libc, ubox, libubox, libuci
+Source: package/system/fstools
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: mips_24kc
+Installed-Size: 19469
+Description:  Block device mounting and checking

@@ -1,0 +1,37 @@
+package fw3_state
+
+config defaults
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+	option __flags_v4 '0x60017'
+	option __flags_v6 '0x60025'
+
+config zone
+	option name 'lan'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+	option masq '1'
+	option mtu_fix '0'
+	option custom_chains '1'
+	list device 'br-lan@lan'
+	list __addrs '192.168.2.184'
+	list __addrs 'fe80::16cf:92ff:fe3c:5544'
+	option __flags_v4 '0x2258c7'
+	option __flags_v6 '0x240c5'
+
+config zone
+	option name 'wlan'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'REJECT'
+	option masq '1'
+	option mtu_fix '0'
+	option custom_chains '1'
+	list device 'wlan0@wlan'
+	list __addrs '192.168.5.1'
+	list __addrs 'fe80::16cf:92ff:fe3c:5544'
+	option __flags_v4 '0x2258c7'
+	option __flags_v6 '0x240c5'
+

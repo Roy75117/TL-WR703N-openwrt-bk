@@ -1,0 +1,18 @@
+
+config aria2 'main'
+	option bt_enable_lpd 'true'
+	option enable_dht 'true'
+	option follow_torrent 'true'
+	option user 'root'
+	option save_session_interval '30'
+	option rpc_auth_method 'none'
+	option enable_log 'false'
+	option dir '/root/share/download'
+	option rpc_listen_port '6800'
+	option file_allocation 'prealloc'
+	option max_concurrent_downloads '6'
+	option split '5'
+	option max_connection_per_server '5'
+	option min_split_size '10M'
+	option enabled '1'
+

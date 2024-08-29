@@ -1,0 +1,8 @@
+Package: luci-app-adblock
+Version: git-19.271.72080-7b230b0-1
+Depends: libc, adblock, luci-lib-jsonc
+Source: feeds/luci/applications/luci-app-adblock
+Section: luci
+Architecture: all
+Installed-Size: 7088
+Description:  LuCI support for Adblock

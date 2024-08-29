@@ -1,0 +1,11 @@
+Package: procps-ng-ps
+Version: 3.3.11-3
+Depends: libc, procps-ng
+Source: feeds/packages/utils/procps-ng
+License: GPL-2.0
+LicenseFiles: COPYING COPYING.LIB
+Section: utils
+Maintainer: Gergely Kiss <mail.gery@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 29141
+Description:  Installs the applet ps.

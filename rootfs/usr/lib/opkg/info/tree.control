@@ -1,0 +1,9 @@
+Package: tree
+Version: 1.7.0-1
+Depends: libc, libgcc
+Source: feeds/packages/utils/tree
+Section: utils
+Maintainer: Banglang Huang <banglang.huang@foxmail.com>
+Architecture: mips_24kc
+Installed-Size: 22077
+Description:  List contents of directories in a tree-like format

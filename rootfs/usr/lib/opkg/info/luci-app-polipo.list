@@ -1,0 +1,5 @@
+/usr/sbin/polipo_purge
+/etc/uci-defaults/40_luci-polipo
+/usr/lib/lua/luci/model/cbi/polipo.lua
+/usr/lib/lua/luci/view/polipo_status.htm
+/usr/lib/lua/luci/controller/polipo.lua

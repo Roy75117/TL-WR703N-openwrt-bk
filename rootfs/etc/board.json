@@ -1,0 +1,12 @@
+{
+	"model": {
+		"id": "tl-wr703n",
+		"name": "TP-Link TL-WR703N v1"
+	},
+	"network": {
+		"lan": {
+			"ifname": "eth0",
+			"protocol": "static"
+		}
+	}
+}

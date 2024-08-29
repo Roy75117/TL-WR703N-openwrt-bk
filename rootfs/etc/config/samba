@@ -1,0 +1,13 @@
+config samba
+	option 'name'			'openwrt'
+	option 'workgroup'		'WORKGROUP'
+	option 'description'		'openwrt'
+	option 'homes'			'1'
+
+config sambashare
+	option name 'samba_share'
+	option path '/root/share'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option create_mask '777'
+	option dir_mask '777'

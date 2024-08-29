@@ -1,0 +1,11 @@
+Package: openssh-client
+Version: 7.4p1-1
+Depends: libc, libopenssl, zlib
+Source: feeds/packages/net/openssh
+License: BSD ISC
+LicenseFiles: LICENCE
+Section: net
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: mips_24kc
+Installed-Size: 310914
+Description:  OpenSSH client.

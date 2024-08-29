@@ -1,0 +1,29 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+#!/bin/sh -e
+
+sleep 5
+
+#enable 64MB swap
+#dd if=/dev/zero of=/swapfile bs=1M count=64
+#mkswap /swapfile
+swapon /swapfile
+
+#start aria2c
+#/etc/init.d/aria2 start
+#aria2c  --daemon=true --enable-rpc --rpc-listen-all -D --conf-path=/etc/config/aria2.conf
+
+#start samba server
+#/etc/init.d/samba start
+
+#start adblock
+#/etc/init.d/adblock start
+
+#start ttyd(port 8888)
+#/etc/init.d/ttyd start
+
+sync
+sleep 5
+sh /etc/freememory.sh
+
+exit 0

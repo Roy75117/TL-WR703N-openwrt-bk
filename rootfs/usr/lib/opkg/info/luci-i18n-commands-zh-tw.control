@@ -1,0 +1,8 @@
+Package: luci-i18n-commands-zh-tw
+Version: git-19.271.72080-7b230b0-1
+Depends: libc, luci-app-commands
+Source: feeds/luci/applications/luci-app-commands
+Section: luci
+Architecture: all
+Installed-Size: 1100
+Description:  Translation for luci-app-commands - 臺灣華語 (Taiwanese)

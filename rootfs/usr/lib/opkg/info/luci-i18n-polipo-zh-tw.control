@@ -1,0 +1,8 @@
+Package: luci-i18n-polipo-zh-tw
+Version: git-19.271.72080-7b230b0-1
+Depends: libc, luci-app-polipo
+Source: feeds/luci/applications/luci-app-polipo
+Section: luci
+Architecture: all
+Installed-Size: 2126
+Description:  Translation for luci-app-polipo - 臺灣華語 (Taiwanese)

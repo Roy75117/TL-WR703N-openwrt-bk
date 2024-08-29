@@ -1,0 +1,11 @@
+/usr/lib/lua/luci/model/cbi/adblock/whitelist_tab.lua
+/usr/lib/lua/luci/model/cbi/adblock/overview_tab.lua
+/usr/lib/lua/luci/view/adblock/query.htm
+/usr/lib/lua/luci/model/cbi/adblock/blacklist_tab.lua
+/usr/lib/lua/luci/model/cbi/adblock/configuration_tab.lua
+/usr/lib/lua/luci/view/adblock/config_css.htm
+/usr/lib/lua/luci/controller/adblock.lua
+/usr/lib/lua/luci/view/adblock/logread.htm
+/etc/uci-defaults/40_luci-adblock
+/usr/lib/lua/luci/view/adblock/blocklist.htm
+/usr/lib/lua/luci/view/adblock/runtime.htm

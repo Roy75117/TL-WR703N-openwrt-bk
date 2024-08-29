@@ -1,0 +1,10 @@
+Package: sshtunnel
+Version: 4-1
+Depends: libc, openssh-client
+Source: feeds/packages/net/sshtunnel
+License: GPL-2.0+
+Section: net
+Maintainer: Nuno Goncalves <nunojpg@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 2565
+Description:  Creates openssh ssh(1) Local and Remote tunnels configured in UCI file. Can be used to allow remote connections, possibly over NATed connections or without public IP/DNS

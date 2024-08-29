@@ -1,0 +1,10 @@
+Package: sshfs
+Version: 2.8-1
+Depends: libc, libfuse, fuse-utils, glib2, libpthread
+Source: feeds/packages/net/sshfs
+License: GPL-2.0
+Section: net
+Maintainer: Zoltan HERPAI <wigyori@uid0.hu>
+Architecture: mips_24kc
+Installed-Size: 19991
+Description:  Mount remote system over sftp.

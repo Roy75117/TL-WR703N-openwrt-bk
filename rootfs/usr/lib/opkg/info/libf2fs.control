@@ -1,0 +1,10 @@
+Package: libf2fs
+Version: 1.8.0-3
+Depends: libc, libuuid
+Source: feeds/base/package/utils/f2fs-tools
+License: GPLv2
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 8052
+Description:  Library for Flash-Friendly File System (F2FS) tools

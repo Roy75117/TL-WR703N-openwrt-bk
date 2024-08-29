@@ -1,0 +1,8 @@
+Package: luci-lib-nixio
+Version: git-19.271.72080-7b230b0-1
+Depends: libc, liblua
+Source: feeds/luci/libs/luci-lib-nixio
+Section: luci
+Architecture: mips_24kc
+Installed-Size: 27211
+Description:  NIXIO POSIX library

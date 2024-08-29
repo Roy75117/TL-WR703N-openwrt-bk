@@ -1,0 +1,8 @@
+Package: luci-i18n-samba-zh-tw
+Version: git-19.271.72080-7b230b0-1
+Depends: libc, luci-app-samba
+Source: feeds/luci/applications/luci-app-samba
+Section: luci
+Architecture: all
+Installed-Size: 964
+Description:  Translation for luci-app-samba - 臺灣華語 (Taiwanese)

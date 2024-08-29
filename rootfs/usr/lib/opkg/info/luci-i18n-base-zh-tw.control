@@ -1,0 +1,8 @@
+Package: luci-i18n-base-zh-tw
+Version: git-19.271.72080-7b230b0-1
+Depends: libc, luci-base
+Source: feeds/luci/modules/luci-base
+Section: luci
+Architecture: all
+Installed-Size: 20798
+Description:  Translation for luci-base - 臺灣華語 (Taiwanese)
