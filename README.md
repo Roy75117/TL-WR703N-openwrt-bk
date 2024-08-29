@@ -12,10 +12,10 @@ https://openwrt.org/toh/tp-link/tl-wr703n
 4. mkf2fs 
 5. f2fsck
 
-※reference : https://www.coldawn.com/how-to-install-lede-on-tl-wr703n-and-enable-extroot/ 
+_reference_ : https://www.coldawn.com/how-to-install-lede-on-tl-wr703n-and-enable-extroot/ 
 
 #### 2. overlay with USB Disk 
-1. Prepare a USB disk no less than 512MB and connect with TL-WR703N
+1. Prepare a USB disk no less than 256MB and connect with TL-WR703N
 2. power on TL-WR703N and connect it to your PC with LAN Cable.
 3. Set PC ip as 192.168.1.x and connect TL-WR703N with ssh
 
@@ -50,7 +50,7 @@ on TL-WR703N :
     cat /etc/config/fstab;
 ```
 
-6. check fstab
+6. Check fstab
 
 on TL-WR703N :
 ```shell
@@ -71,21 +71,21 @@ on TL-WR703N :
 >        option  uuid    'fdacc9f1-0e0e-45ab-acee-9cb9cc8d7d49'
 >        option  enabled '1'
 
-7. copy /overlay to USB disk(sda1)
+7. Copy /overlay to USB disk(/dev/sda1)
 
 on TL-WR703N :
 ```shell
     mount /dev/sda1 /mnt ; tar -C /overlay -cvf - . | tar -C /mnt -xf - ; umount /mnt
 ```
 
-8. reboot TL-WR703N
+8. Reboot TL-WR703N
 
 on TL-WR703N :
 ```shell
      reboot
 ```
 
-8. check disk information
+9. Check disk information
 
 on TL-WR703N :
 ```shell
@@ -133,7 +133,7 @@ on TL-WR703N :
     cat /tmp/list-installed.txt | xargs opkg install
 ```
 
-#### 5. (Option) prepare folder and enable 64MB swap for **6. restore config for each service** 
+#### 5. (Option) prepare folder and enable 64MB swap for **6. restore config files for each service** 
 
 on PC :
 ```shell
@@ -159,7 +159,7 @@ on TL-WR703N :
 >   0 */2 * * 1 /etc/freememory.sh
 
 
-#### 6. Restore config for each service
+#### 6. Restore config files for each service
 The default service with **list-installed.txt** are the deblow.
 1. sshtunnel for socket5 proxy (by openssh client)
 2. ttyd (web-based terminal)
@@ -190,7 +190,7 @@ on PC :
 ``` shell
     scp ./rootfs/etc/config/polipo root@192.168.5.1:/etc/config
 ```
-http proxy port is **4321**. http proxy is based on socket5 proxy which provied by sshtunnel.
+http proxy port is **4321**. http proxy is based on socket5 proxy which provied by **sshtunnel**.
 
 Assign http proxy as **http://192.168.5.1:4321** on client side. 
 
@@ -256,13 +256,11 @@ on TL-WR703N :
     /etc/init.d/ttyd enable
     /etc/init.d/ttyd start
 ```
-Default port is **8888**. Access with **http://192.168.5.1:8888**
-
-
+Default port is **8888**. Access with **http://192.168.5.1:8888** or **http://openwrt.local:8888**
 
 
 ### Appendix
-#### a. Use dd to restart partition. Use `lsblk` to check the the USB device
+#### a. Use dd to restart partition. Use **lsblk** to check the the USB device
 ```shell
 lsblk
 ```
@@ -300,7 +298,7 @@ sudo dumpe2fs -h /dev/sda
 ```
 
 ```shell
-sudo dd if=/dev/sda1 of=./openwrt.sdx1.200M.img bs=4k status=progress count=[block count of dumpe2fs] conv=notrunc,noerror
+sudo dd if=/dev/sda1 of=./openwrt.sdx1.img bs=4k status=progress count=[block count of dumpe2fs] conv=notrunc,noerror
 ```
 
 #### iii. Check img content with [mount-img](https://github.com/mafintosh/mount-img)
