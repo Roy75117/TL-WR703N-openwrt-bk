@@ -268,7 +268,7 @@ Default port is **8888**. Access with **http://192.168.5.1:8888** or **http://op
 
 
 ### Appendix
-#### a. Use dd to restart partition. Use **lsblk** to check the the USB device
+#### a. Use dd to restore partition. Use **lsblk** to check the the USB device
 ```shell
 lsblk
 ```
@@ -285,12 +285,12 @@ lsblk
 sudo dd if=./openwrt.sdx1.img of=/dev/sda1 bs=4k status=progress
 ```
 
-#### b. check file before extend rootfs
+#### b. Check file before extend rootfs
 ```shell
 sudo e2fsck -f -y /dev/sda1
 ```
 
-#### c. extend whole usb storage for rootfs
+#### c. Extend whole usb storage for rootfs
 ```shell
 sudo resize2fs /dev/sda1
 ```
