@@ -5,13 +5,15 @@ https://openwrt.org/toh/tp-link/tl-wr703n
 
 #### 1. Upgrade extroot to device boot firmware.
 
-TL-WR703N only has 4MB Flash storage, so the only official stable release(w/ luci) can deploy usb extend is [barrier_breaker 14.07](https://openwrt.org/releases/14.07/notes-14.07)
+TL-WR703N only has 4MB Flash storage, so the only official stable release(w/ luci) can deploy extroot is [barrier_breaker 14.07](https://openwrt.org/releases/14.07/notes-14.07)
 
-However, [barrier_breaker 14.07](https://openwrt.org/releases/14.07/notes-14.07) is too old that lost of pkg don't support this version. The lastest and final supported rel for TL-WR703N is lede-17.01.7.
+However, [barrier_breaker 14.07](https://openwrt.org/releases/14.07/notes-14.07) is too old that lots of pkgs don't support this rel. The lastest and final supported rel for TL-WR703N is lede-17.01.7.
 
-The only way is to build up customize image with [imagebuilder](https://openwrt.org/docs/guide-user/additional-software/imagebuilder) to include extroot related pkg only.
+The only way to use lede-17.01.7 with TL-WR703N is to build up a customize image with [imagebuilder](https://openwrt.org/docs/guide-user/additional-software/imagebuilder) to include extroot related pkg only.
 
-**lede-17.01.7-ar71xx-generic-tl-wr703n-v1-squashfs-sysupgrade.bin** is provided for very limited size boot firmware for TP-Link TL-WR703N. This image is built with following pkg by default.
+After extroot with a larger storage USB disk, you can install luci and other pkgs to levarge TL-WR703N.
+
+**lede-17.01.7-ar71xx-generic-tl-wr703n-v1-squashfs-sysupgrade.bin** is provided for very limited size boot firmware for TP-Link TL-WR703N. This image is built with following pkg by default which you can use for extroot.
 1. block-mount 
 2. kmod-fs-f2fs 
 3. kmod-usb-storage 
