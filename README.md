@@ -3,7 +3,13 @@
 ### This is the backup repo for legacy openwrt rel(lede-17.01.7) of TP-Link TL-WR703N
 https://openwrt.org/toh/tp-link/tl-wr703n
 
-#### 1. upgrade extroot to device boot firmware.
+#### 1. Upgrade extroot to device boot firmware.
+
+TL-WR703N only has 4MB Flash storage, so the only official stable release(w/ luci) can deploy usb extend is [barrier_breaker 14.07](https://openwrt.org/releases/14.07/notes-14.07)
+
+However, [barrier_breaker 14.07](https://openwrt.org/releases/14.07/notes-14.07) is too old that lost of pkg don't support this version. The lastest and final supported rel for TL-WR703N is lede-17.01.7.
+
+The only way is to build up customize image with [imagebuilder](https://openwrt.org/docs/guide-user/additional-software/imagebuilder) to include extroot related pkg only.
 
 **lede-17.01.7-ar71xx-generic-tl-wr703n-v1-squashfs-sysupgrade.bin** is provided for very limited size boot firmware for TP-Link TL-WR703N. This image is built with following pkg by default.
 1. block-mount 
@@ -14,7 +20,7 @@ https://openwrt.org/toh/tp-link/tl-wr703n
 
 _reference_ : https://www.coldawn.com/how-to-install-lede-on-tl-wr703n-and-enable-extroot/ 
 
-#### 2. overlay with USB Disk 
+#### 2. Overlay with USB Disk 
 1. Prepare a USB disk no less than 256MB and connect with TL-WR703N
 2. power on TL-WR703N and connect it to your PC with LAN Cable.
 3. Set PC ip as 192.168.1.x and connect TL-WR703N with ssh
