@@ -106,9 +106,10 @@ Try to connect TL-WR703N to internet. If you have config backup for network, jus
 
 on PC :
 ```shell
-    scp ./rootfs/config/network root@192.168.1.1:/etc/config
-    scp ./rootfs/config/wireless root@192.168.1.1:/etc/wireless
-    scp ./rootfs/config/firewall root@192.168.1.1:/etc/firewall
+    scp ./rootfs/etc/config/network root@192.168.1.1:/etc/config/
+    scp ./rootfs/etc/config/wireless root@192.168.1.1:/etc/config/
+    scp ./rootfs/etc/config/firewall root@192.168.1.1:/etc/config/
+    scp ./rootfs/etc/config/system root@192.168.1.1:/etc/config/
 ```
 
 Power down the device and connect TL-WR703N to internet with LAN cable then power on.
