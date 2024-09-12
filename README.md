@@ -268,7 +268,24 @@ Default port is **8888**. Access with **http://192.168.5.1:8888** or **http://op
 
 
 ### Appendix
-#### a. Use dd to restore partition. Use **lsblk** to check the the USB device
+#### a. Blink LED for data transmit
+Move to **System** -> **LED Configuration**
+
+* LED Name : **tp-link:blue:system**
+* Trigger : **netdev**
+* Device : **eth0**
+* Trigger Mode : Check on **Transmit**
+
+the config file is _/etc/config/system_
+>config led
+>
+>        option default '0'
+>        option sysfs 'tp-link:blue:system'
+>        option trigger 'netdev'
+>        option dev 'eth0'
+>        option mode 'tx'
+
+#### b. Use dd to restore partition. Use **lsblk** to check the the USB device
 ```shell
 lsblk
 ```
@@ -285,12 +302,12 @@ lsblk
 sudo dd if=./openwrt.sdx1.img of=/dev/sda1 bs=4k status=progress
 ```
 
-#### b. Check file before extend rootfs
+#### c. Check file before extend rootfs
 ```shell
 sudo e2fsck -f -y /dev/sda1
 ```
 
-#### c. Extend whole usb storage for rootfs
+#### d. Extend whole usb storage for rootfs
 ```shell
 sudo resize2fs /dev/sda1
 ```
