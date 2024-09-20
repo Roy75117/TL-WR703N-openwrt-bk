@@ -13,7 +13,7 @@ The only way to use lede-17.01.7 with TL-WR703N is to build up a customize image
 
 After extroot with a larger storage USB disk, you can install luci and other pkgs to levarge TL-WR703N.
 
-**lede-17.01.7-ar71xx-generic-tl-wr703n-v1-squashfs-sysupgrade.bin** is provided for very limited size boot firmware for TP-Link TL-WR703N. This image is built with following pkg by default which you can use for extroot.
+[**lede-17.01.7-ar71xx-generic-tl-wr703n-v1-squashfs-sysupgrade.bin**](lede-17.01.7-ar71xx-generic-tl-wr703n-v1-squashfs-sysupgrade.bin) is provided for very limited size boot firmware for TP-Link TL-WR703N. This image is built with following pkg by default which you can use for extroot.
 1. block-mount 
 2. kmod-fs-f2fs 
 3. kmod-usb-storage 
