@@ -64,13 +64,13 @@
 config server raspbian_vpn
         option user       pi
         option hostname   sweethome286.clear-net.jp
-        option port       2222
+        option port       xxxx
         option IdentityFile             /root/.ssh/id_rsa
 
 #config server pios_vpn
 #        option user       pi
 #        option hostname   sweethome286.clear-net.jp
-#        option port       222
+#        option port       xxx
 #        option IdentityFile             /root/.ssh/id_rsa
 
 
