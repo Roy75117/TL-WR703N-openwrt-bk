@@ -265,7 +265,7 @@ on TL-WR703N :
     /etc/init.d/ttyd enable
     /etc/init.d/ttyd start
 ```
-Default port is **8888**. Access with **http://192.168.5.1:8888** or **http://openwrt.local:8888**
+Default port is **800**. Access with **http://192.168.5.1:800** or **http://tl-wr703n.local:800**
 
 
 ### Appendix

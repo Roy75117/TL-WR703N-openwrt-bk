@@ -10,7 +10,7 @@ SERVICE_DAEMONIZE=1
 start() {
 	logger -t TTYD 'Starting ttyd service...'
 	echo 'Starting ttyd service...'
-	service_start /usr/bin/ttyd -i br-lan -p 8888 /bin/login
+	service_start /usr/bin/ttyd -i br-lan -p 800 /bin/login
 	return 0
 }
 
