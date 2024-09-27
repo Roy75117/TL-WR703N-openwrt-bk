@@ -192,7 +192,7 @@ on PC :
 ```
 default download folder is **/root/share/download**
 
-yaaw url is **http://192.168.5.1/yaaw** or **http://openwrt.local/yaaw**
+yaaw url is **http://192.168.5.1/yaaw** or **http://tl-wr703n.local/yaaw**
 
 ##### polipo
 on PC :
