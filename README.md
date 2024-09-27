@@ -165,7 +165,7 @@ on TL-WR703N :
 ```shell
     crontab -e
 ```
->   0 */2 * * 1 /etc/freememory.sh
+>   0 */2 * * * /etc/freememory.sh
 
 
 #### 6. Restore config files for each service
