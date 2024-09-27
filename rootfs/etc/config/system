@@ -3,7 +3,7 @@ config system
 	option ttylogin '0'
 	option log_size '64'
 	option urandom_seed '0'
-	option hostname 'openwrt'
+	option hostname 'TL-WR703N'
 	option zonename 'Asia/Tokyo'
 	option timezone 'JST-9'
 	option log_proto 'udp'
