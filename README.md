@@ -267,6 +267,22 @@ on TL-WR703N :
 ```
 Default port is **800**. Access with **http://192.168.5.1:800** or **http://tl-wr703n.local:800**
 
+##### File Browser
+luci provide the simple file browser(read only)
+http://192.168.5.1/cgi-bin/luci/admin/filebrowser
+
+Or modify uhttp config file to add second uhttpd. 
+on PC :
+``` shell
+    scp ./rootfs/etc/config/uhttp root@192.168.5.1:/etc/config
+```
+on TL-WR703N :
+```shell
+    /etc/init.d/uhttp restart
+```
+Default port is **8080** Access http://192.168.5.1:8080 to check. Directory listing is enable by default.
+
+_reference_ : https://forum.archive.openwrt.org/viewtopic.php?id=26073
 
 ### Appendix
 #### a. Blink LED for data transmit
